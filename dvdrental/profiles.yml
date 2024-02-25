@@ -1,0 +1,14 @@
+dvdrental:
+  outputs:
+    dev:
+      dataset: test_dev
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: "{{ env_var('BIGQUERY_KEY_PATH') }}"
+      location: US
+      method: service-account
+      priority: interactive
+      project: dbt-bigquery-415321
+      threads: 1
+      type: bigquery
+  target: dev
